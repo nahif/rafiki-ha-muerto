@@ -9,8 +9,19 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2osobqshwp9v5</unique-id>
     <saved-with-version>17300</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -35,15 +46,123 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1" />
+    <object-folder expanded="1">
+        <object-type name="Solid" sid="9990203401401285">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8199157101718164">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="509505696953477">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5908123905021642" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Principal" sid="726095155965245">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="4826025770334384">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="3907057348769194">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6494589820684629" speed="5">
+                    <frame duration="1" hotspotX="0.541367" hotspotY="0.464807">
+                        <collision-poly>
+                            <point x="1" y="0.982736" />
+                            <point x="0.64928" y="0.998672" />
+                            <point x="0.206834" y="0.953519" />
+                            <point x="0.501798" y="0.567065" />
+                            <point x="0.293165" y="0" />
+                            <point x="0.541367" y="0.163347" />
+                            <point x="0.899281" y="0.0411687" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="8034650577534386">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Camara" sid="1438571896623991">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="7296084455009162">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4657758070138184" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="6299854073711606">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Planta" sid="2870680119463359">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="7851841708473912">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4410099004304638" speed="5">
+                    <frame duration="1" hotspotX="0.46" hotspotY="0.67" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="697441145426726">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="7446003813465915">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Sprite" sid="3314296692778751">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="5749036862111685">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3063085431627949">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4791258921505886" speed="5">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.425">
+                        <collision-poly>
+                            <point x="0.0166667" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
     <families />
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="1" />
+    </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1">
