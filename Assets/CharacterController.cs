@@ -23,7 +23,7 @@ public class CharacterController : MonoBehaviour {
 		};
 		RaycastHit2D hit = Physics2D.Raycast (transform.position, -transform.up);
 		if (hit.collider != null && hit.collider.tag!="Player") {
-			Debug.Log(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI);
+			//Debug.Log(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI);
 			transform.rotation=Quaternion.AngleAxis(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI-45,Vector3.forward);
 		}
 	}
