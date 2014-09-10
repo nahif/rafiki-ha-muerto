@@ -129,7 +129,7 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="Sprite" sid="3314296692778751">
+        <object-type name="Malv" sid="3314296692778751">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Physics" sid="5749036862111685">
@@ -141,6 +141,29 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4791258921505886" speed="5">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.425">
+                        <collision-poly>
+                            <point x="0.0166667" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Roca" sid="2487852659990563">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="7304330958711806">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="7934677091548982">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1505583372236729" speed="5">
                     <frame duration="1" hotspotX="0.55" hotspotY="0.425">
                         <collision-poly>
                             <point x="0.0166667" y="0" />
