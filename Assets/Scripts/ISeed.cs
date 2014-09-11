@@ -1,5 +1,5 @@
-﻿public interface ISeed {
-
+﻿
+public interface ISeed {
 	void grow();
 	void shrink();
 	void shine();

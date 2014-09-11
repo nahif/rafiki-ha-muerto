@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ExampleSeed : MonoBehaviour, ISeed {
 
+	public Transform plant;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,7 +18,8 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 
 	public void grow ()
 	{
-		throw new System.NotImplementedException ();
+		Instantiate( plant, transform.position, Quaternion.identity);
+		Destroy (this.gameObject);
 	}
 
 	public void shrink ()
@@ -28,7 +30,6 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 	public void shine ()
 	{
 		Debug.Log ("I Shine Like a Diamond");
-		rigidbody2D.AddForce (Vector2.up*40);
 	}
 
 	public void interact ()

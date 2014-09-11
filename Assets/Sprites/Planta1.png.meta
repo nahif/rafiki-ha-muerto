@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 606b5a86ab04af04c9bce5f0981800c7
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Planta1
+    21300002: Planta1_0
+    21300004: Planta1_1
+    21300006: Planta1_2
+    21300008: Planta1_3
+    21300010: Planta1_4
+    21300012: Planta1_5
+    21300014: Planta1_6
+    21300016: Planta1_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Planta1_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 251
+        width: 157
+        height: 128
+      alignment: 9
+      pivot: {x: .926927328, y: .918922424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 199
+        width: 149
+        height: 180
+      alignment: 9
+      pivot: {x: .21624878, y: .95830822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 31
+        width: 167
+        height: 134
+      alignment: 9
+      pivot: {x: .0802725628, y: .953827143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 50
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 61
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 51
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 12
+        width: 68
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Planta1_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 59
+        width: 127
+        height: 338
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
