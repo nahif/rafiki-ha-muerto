@@ -39,7 +39,7 @@ public class CharacterController : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (grounded&&Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.AddForce(transform.up*500);
 		}
 	}
