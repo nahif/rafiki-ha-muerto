@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Semillas" sid="3434961169249448" static="0" type="number">1</variable>
+        <variable constant="0" name="CamVelY" sid="3238825804821298" static="0" type="number">2</variable>
+        <variable constant="0" name="CamVelX" sid="7703786195035661" static="0" type="number">2</variable>
+        <event-block sid="2479379394803988">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1237998723657213" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="2275371339624261" type="Principal">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5479970519391739">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8654905940465822" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="5439986674598133" type="Principal">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8382644351309338">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="8074324834740555" type="Principal" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="7942335285587303" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="8043928656725806">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="930962513146319" type="Camara">
+                    <param id="0" name="Object">Principal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1647973997101501" type="Camara">
+                    <param id="0" name="X">Camara.X+(Principal.X-Camara.X)/CamVelX</param>
+                    <param id="1" name="Y">Camara.Y+(Principal.Y-Camara.Y)/CamVelY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1719768288929152">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="3502189021537896" type="Camara">
+                    <param id="0" name="Object">Text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6635816141039741" type="Camara">
+                    <param id="0" name="X">Camara.X+(Text.X-Camara.X)/(CamVelX*10)</param>
+                    <param id="1" name="Y">Camara.Y+(Text.Y-Camara.Y)/(CamVelY*10)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8007490519888793">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9997418964050263" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="428884412482978" type="System">
+                    <param id="0" name="Variable">Semillas</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="3664502819819468" type="Principal" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3462260881371025" type="System">
+                    <param id="0" name="Object to create">Planta</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">Principal.X</param>
+                    <param id="3" name="Y">Principal.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="7902695635471522" type="System">
+                    <param id="0" name="Variable">Semillas</param>
+                    <param id="1" name="Value">Semillas-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468247587936587">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6611289362603278" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4618269519745468" type="Text2">
+                    <param id="0" name="Text">&quot;Semillas: &quot;&amp;Semillas</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="580501949498683">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5749569357706336" type="Keyboard">
+                    <param id="0" name="Key">17 (Ctrl)</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="8395163257549685" type="Planta">
+                    <param id="0" name="Object">Principal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="697884304433122" type="Planta" />
+                <action id="-9" name="Set value" sid="5802190572394331" type="System">
+                    <param id="0" name="Variable">Semillas</param>
+                    <param id="1" name="Value">Semillas+1</param>
+                </action>
+                <action id="0" name="Set text" sid="3444780985711283" type="Text2">
+                    <param id="0" name="Text">&quot;Semillas: &quot;&amp;Semillas</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4445870889025543">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
