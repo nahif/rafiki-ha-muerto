@@ -31,7 +31,11 @@ public class CharacterController : MonoBehaviour {
 			RaycastHit2D hit = Physics2D.Raycast (transform.position, -transform.up);
 			if (hit.collider != null && hit.collider.tag!="Player") {
 				//Debug.Log(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI);
-				transform.rotation=Quaternion.AngleAxis(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI-45,Vector3.forward);
+				float angle=transform.eulerAngles.z;
+				float angle2=Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI-45;
+				//if(angle<0)angle+=2*3.14f;
+				//if(angle2<0)angle2+=2*3.14f;
+				transform.rotation=Quaternion.AngleAxis(angle,Vector3.forward);
 			}
 		} else {
 			transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
@@ -39,7 +43,7 @@ public class CharacterController : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (grounded&&Input.GetKeyDown (KeyCode.Space)) {
+		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.AddForce(transform.up*500);
 		}
 	}
