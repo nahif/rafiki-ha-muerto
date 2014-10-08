@@ -10,8 +10,8 @@ public class SeedPlanter : MonoBehaviour {
 	public float radius = 5f;
 	private Vector2 maxAuraScale;
 	private bool planting = false;
-	private float auraGrowTime = 0.5f;
-	private float auraShrinkTime = 0.3f;
+	public float auraGrowTime = 0.5f;
+	public float auraShrinkTime = 0.3f;
 	private Vector2 startingRendererSize;
 
 	void Start () {

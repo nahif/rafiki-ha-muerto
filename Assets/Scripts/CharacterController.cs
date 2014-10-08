@@ -6,11 +6,14 @@ public class CharacterController : MonoBehaviour {
 	public float maxspeed=300f;
 	public float actualspeed=0;
 	bool facingRight=false;
-
+	Animator anim;
 	bool grounded;
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
 	Transform groundCheck;
+	void Start(){
+		anim = GetComponent<Animator> ();
+	}
 
 	void  Awake() {
 		groundCheck = transform.Find ("GroundCheck");
@@ -21,6 +24,8 @@ public class CharacterController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		float move = Input.GetAxis ("Horizontal");
 		rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
+		anim.SetFloat ("Speed",Mathf.Abs( maxspeed * move));
+
 		if (move > 0 && !facingRight) {
 			Flip();		
 		}
