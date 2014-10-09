@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterController : MonoBehaviour {
 
 	public float maxspeed=300f;
+	public float deathSpeed = 20f;
 	public float actualspeed=0;
 	bool facingRight=false;
 
@@ -37,6 +38,10 @@ public class CharacterController : MonoBehaviour {
 				//if(angle2<0)angle2+=2*3.14f;
 				transform.rotation=Quaternion.AngleAxis(angle,Vector3.forward);
 			}
+			if (rigidbody2D.velocity.y <= -deathSpeed) {
+				Die ();
+				Debug.Log("DIEEEEEEEEEEEEEEEE");
+			}
 		} else {
 			transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 		}
@@ -52,5 +57,10 @@ public class CharacterController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	void Die() {
+		Transform respawner = GameObject.FindGameObjectWithTag ("Respawn").transform;
+		transform.position = respawner.position;
 	}
 }
