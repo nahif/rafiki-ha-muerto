@@ -14,6 +14,8 @@ public class SeedPlanter : MonoBehaviour {
 	public float auraShrinkTime = 0.3f;
 	private Vector2 startingRendererSize;
 
+	public Camera camera;
+
 	void Start () {
 		aura = Resources.Load ("Prefabs/Aura") as GameObject;
 		planterAura = (Instantiate(aura) as GameObject).transform;
@@ -53,9 +55,13 @@ public class SeedPlanter : MonoBehaviour {
 			auraRenderer.enabled = true;
 			planterAura.localScale = Vector2.Lerp(new Vector2(0.1f,0.1f), maxAuraScale, t / auraGrowTime);
 			t += Time.deltaTime;
+			camera.orthographicSize = Mathf.Lerp(camera.orthographicSize,5.5f,Time.deltaTime*0.3f);
+
+
 		} else {
 				planterAura.localScale = Vector2.Lerp(planterAura.localScale, new Vector2(0.1f, 0.1f), t / auraShrinkTime);
 				t += Time.deltaTime;
+			camera.orthographicSize = Mathf.Lerp(camera.orthographicSize,7.22f,Time.deltaTime*1.2f);
 			if (t/auraShrinkTime >= 1f) {
 				auraRenderer.enabled = false;
 			}
