@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Semilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,6 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 400014, guid: adcae6d1b0ad05c4f865020c531644cf, type: 2}
+  puedeCrecer: 0
+  debugS: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

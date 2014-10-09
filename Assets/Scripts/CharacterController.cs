@@ -64,7 +64,7 @@ public class CharacterController : MonoBehaviour {
 				float angle2=Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI-45;
 				//if(angle<0)angle+=2*3.14f;
 				//if(angle2<0)angle2+=2*3.14f;
-				transform.rotation=Quaternion.AngleAxis(angle,Vector3.forward);
+				transform.rotation=Quaternion.AngleAxis(angle2,Vector3.forward);
 			}
 
 		} else {
@@ -77,7 +77,8 @@ public class CharacterController : MonoBehaviour {
 		if (!burried &&(grounded) && Input.GetKeyDown (KeyCode.Space)) {
 				rigidbody2D.AddForce (transform.up * 500);
 		}
-		if (!GetComponent<SeedPlanter>().planting && !burried && (grounded) && Input.GetKeyDown (KeyCode.DownArrow)) {
+		if (gcc.materialName != "Plant" && !GetComponent<SeedPlanter>().planting && 
+		    !burried && (grounded) && Input.GetKeyDown (KeyCode.DownArrow)) {
 			Dig();
         }
 		if (burried && Input.GetKeyDown(KeyCode.UpArrow)) {

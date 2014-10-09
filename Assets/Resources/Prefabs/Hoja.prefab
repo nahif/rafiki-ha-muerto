@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 50: {fileID: 5000000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Resorte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 50: {fileID: 5000002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 50: {fileID: 5000004}
   - 233: {fileID: 23300000}
   - 231: {fileID: 23100000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Planta1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 00b26f1665db9584094d4a21f7bef3a6, type: 2}
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
