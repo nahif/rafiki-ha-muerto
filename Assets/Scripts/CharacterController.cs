@@ -3,9 +3,10 @@ using System.Collections;
 
 public class CharacterController : MonoBehaviour {
 
-	public float maxspeed=300f;
-	public float deathSpeed = 20f;
+	public float maxspeed=10f;
+	public float deathChangeSpeed = 20f;
 	public float actualspeed=0;
+	private float lastYSpeed;
 	bool facingRight=false;
 	Animator anim;
 	bool grounded;
@@ -29,6 +30,9 @@ public class CharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (Mathf.Abs (rigidbody2D.velocity.y - lastYSpeed) >= deathChangeSpeed)
+			Die ();
+		lastYSpeed = rigidbody2D.velocity.y;
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		float move = Input.GetAxis ("Horizontal");
 		string materialName = gcc.materialName;
@@ -59,18 +63,16 @@ public class CharacterController : MonoBehaviour {
 				//if(angle2<0)angle2+=2*3.14f;
 				transform.rotation=Quaternion.AngleAxis(angle,Vector3.forward);
 			}
-			if (rigidbody2D.velocity.y <= -deathSpeed) {
-				Die ();
-				Debug.Log("DIEEEEEEEEEEEEEEEE");
-			}
+
 		} else {
 			transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 		}
 	}
 	
 	void Update () {
-		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
-			rigidbody2D.AddForce(transform.up*500);
+
+		if ((grounded) && Input.GetKeyDown (KeyCode.Space)) {
+				rigidbody2D.AddForce (transform.up * 500);
 		}
 	}
 	void Flip(){
