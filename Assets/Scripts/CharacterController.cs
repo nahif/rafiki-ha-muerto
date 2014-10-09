@@ -7,11 +7,21 @@ public class CharacterController : MonoBehaviour {
 	public float deathSpeed = 20f;
 	public float actualspeed=0;
 	bool facingRight=false;
-
+	Animator anim;
 	bool grounded;
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
 	Transform groundCheck;
+
+	//Cambios comportamiento segun piso
+	GroundCheckController gcc;
+
+
+
+	void Start(){
+		anim = GetComponent<Animator> ();
+		gcc = (GroundCheckController) GameObject.Find("GroundCheck").GetComponent("GroundCheckController");
+	}
 
 	void  Awake() {
 		groundCheck = transform.Find ("GroundCheck");
@@ -21,7 +31,18 @@ public class CharacterController : MonoBehaviour {
 	void FixedUpdate () {
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		float move = Input.GetAxis ("Horizontal");
-		rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
+		string materialName = gcc.materialName;
+		if (materialName == "Vacio") {
+			rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
+		} else if (materialName == "Resbaladiso") {
+			gcc.delay = Mathf.Lerp (gcc.delay, maxspeed * move, gcc.friction * gcc.friction * Time.deltaTime);
+   			rigidbody2D.velocity = new Vector2 (gcc.delay, rigidbody2D.velocity.y);
+ 		} else {
+			rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
+		}
+
+		anim.SetFloat ("Speed",Mathf.Abs( maxspeed * move));
+
 		if (move > 0 && !facingRight) {
 			Flip();		
 		}
