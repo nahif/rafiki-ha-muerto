@@ -13,6 +13,7 @@ public class SeedPlanter : MonoBehaviour {
 	public float auraGrowTime = 0.5f;
 	public float auraShrinkTime = 0.3f;
 	private Vector2 startingRendererSize;
+	private GameObject myCollectedObject; //Aqui se guarda lo que hayamos recogido.
 
 	public Camera camera;
 
@@ -30,7 +31,34 @@ public class SeedPlanter : MonoBehaviour {
 	float t = 0f;
 	void Update () {
 
+
 		if (!GetComponent<CharacterController>().burried) {
+
+			if(Input.GetKeyDown(KeyCode.X)){
+				//CODIGO PARA RECOGER UNA SEMILLA, TOMA LA PRIMERA Y BOTA LA QUE TIENE (SI TIENE)
+				//Planteo:: Interfaz COLLECTABLE util? (Por si hay mas que semillas)
+				if(myCollectedObject==null){
+					Debug.Log ("Se supone que deberia atrapar una semilla");
+					Collider2D[] Seeds = Physics2D.OverlapCircleAll(transform.position, 5f);
+					foreach (Collider2D CSeed in Seeds) {
+						MonoBehaviour[] list = CSeed.gameObject.GetComponents<MonoBehaviour>();
+						foreach(MonoBehaviour mb in list){
+							if(mb is ISeed){
+								ISeed seed= mb as ISeed;
+								myCollectedObject=seed.onCollect();
+								break; //Solo queremos una.
+							}
+						}
+						if(myCollectedObject!=null)break; //Por el doble Foreach
+					}
+				}else{
+					myCollectedObject.active=true;
+					myCollectedObject.GetComponent<Transform>().position=transform.position;
+					myCollectedObject=null;
+					Debug.Log ("Se supone que tengo que soltar una semilla");
+				}
+			}
+
 		if (Input.GetKeyDown(KeyCode.Z)) {
 			t = 0f;
 			planting = true;
@@ -45,7 +73,7 @@ public class SeedPlanter : MonoBehaviour {
 				foreach(MonoBehaviour mb in list){
 					if(mb is ISeed){
 						ISeed seed= mb as ISeed;
-						seed.shine();
+						seed.shine(); // Esto deberia estar en PLANTING por que la idea es que "Brille" al seleccionarlo.
 						seed.grow();
 					}
 				}

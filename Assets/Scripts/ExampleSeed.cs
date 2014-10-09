@@ -6,7 +6,6 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 	public Transform plant;
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -50,7 +49,7 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 
 	public void shine ()
 	{
-		Debug.Log ("I Shine Like a Diamond");
+		Debug.Log ("estoy brillando");
 	}
 
 	public void interact ()
@@ -63,9 +62,10 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 		throw new System.NotImplementedException ();
 	}
 
-	public void onCollect ()
+	public GameObject onCollect ()
 	{
-		throw new System.NotImplementedException ();
+			this.gameObject.active=false;
+			return this.gameObject;
 	}
 
 	#endregion
