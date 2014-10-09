@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxspeed: 10
+  deathSpeed: 20
   actualspeed: 0
   whatIsGround:
     serializedVersion: 2
@@ -117,6 +118,9 @@ MonoBehaviour:
   planterAura: {fileID: 0}
   auraRenderer: {fileID: 0}
   radius: 10
+  auraGrowTime: .5
+  auraShrinkTime: .300000012
+  camera: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

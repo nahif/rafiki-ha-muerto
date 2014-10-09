@@ -992,6 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxspeed: 10
+  deathSpeed: 20
   actualspeed: 0
   whatIsGround:
     serializedVersion: 2
@@ -1570,6 +1571,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 670914721}
+    - target: {fileID: 11400000, guid: afe5736211658724880f0cf74fd28d92, type: 2}
+      propertyPath: deathSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe5736211658724880f0cf74fd28d92, type: 2}
   m_RootGameObject: {fileID: 1217804297}
