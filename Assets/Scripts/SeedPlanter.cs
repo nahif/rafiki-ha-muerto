@@ -9,7 +9,7 @@ public class SeedPlanter : MonoBehaviour {
 	public SpriteRenderer auraRenderer;
 	public float radius = 5f;
 	private Vector2 maxAuraScale;
-	private bool planting = false;
+	public bool planting = false;
 	public float auraGrowTime = 0.5f;
 	public float auraShrinkTime = 0.3f;
 	private Vector2 startingRendererSize;
@@ -30,7 +30,7 @@ public class SeedPlanter : MonoBehaviour {
 	float t = 0f;
 	void Update () {
 
-
+		if (!GetComponent<CharacterController>().burried) {
 		if (Input.GetKeyDown(KeyCode.Z)) {
 			t = 0f;
 			planting = true;
@@ -67,6 +67,7 @@ public class SeedPlanter : MonoBehaviour {
 			}
 		}
 		planterAura.position = transform.position;
+		}
 	}
 
 }

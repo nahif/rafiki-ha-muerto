@@ -7,6 +7,7 @@ public class CharacterController : MonoBehaviour {
 	public float deathChangeSpeed = 20f;
 	public float actualspeed=0;
 	private float lastYSpeed;
+	public bool burried = false;
 	bool facingRight=false;
 	Animator anim;
 	bool grounded;
@@ -34,6 +35,8 @@ public class CharacterController : MonoBehaviour {
 			Die ();
 		lastYSpeed = rigidbody2D.velocity.y;
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
+		//Movimiento horizontal
+		if (burried) return;
 		float move = Input.GetAxis ("Horizontal");
 		string materialName = gcc.materialName;
 		if (materialName == "Vacio") {
@@ -52,7 +55,7 @@ public class CharacterController : MonoBehaviour {
 		}
 		else if(move<0 && facingRight){
 			Flip();
-		};
+		}
 		if(grounded) {
 			RaycastHit2D hit = Physics2D.Raycast (transform.position, -transform.up);
 			if (hit.collider != null && hit.collider.tag!="Player") {
@@ -71,9 +74,16 @@ public class CharacterController : MonoBehaviour {
 	
 	void Update () {
 
-		if ((grounded) && Input.GetKeyDown (KeyCode.Space)) {
+		if (!burried &&(grounded) && Input.GetKeyDown (KeyCode.Space)) {
 				rigidbody2D.AddForce (transform.up * 500);
 		}
+		if (!GetComponent<SeedPlanter>().planting && !burried && (grounded) && Input.GetKeyDown (KeyCode.DownArrow)) {
+			Dig();
+        }
+		if (burried && Input.GetKeyDown(KeyCode.UpArrow)) {
+			GoOut();
+		}
+
 	}
 	void Flip(){
 		facingRight = !facingRight;
@@ -85,5 +95,15 @@ public class CharacterController : MonoBehaviour {
 	void Die() {
 		Transform respawner = GameObject.FindGameObjectWithTag ("Respawn").transform;
 		transform.position = respawner.position;
+	}
+
+	void Dig() {
+		burried = true;
+		//CAMBIAR ANIMACION
+
+	}
+
+	void GoOut() {
+		burried = false;
 	}
 }

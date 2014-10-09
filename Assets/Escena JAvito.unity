@@ -972,7 +972,7 @@ Transform:
   m_PrefabInternal: {fileID: 1675323068}
   m_GameObject: {fileID: 1217804297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.09326935, y: 71.804306, z: 0}
+  m_LocalPosition: {x: -2.83522701, y: 8.92510796, z: 0}
   m_LocalScale: {x: .367487341, y: .367487282, z: 1}
   m_Children:
   - {fileID: 499812621}
@@ -1021,6 +1021,7 @@ MonoBehaviour:
   maxspeed: 10
   deathChangeSpeed: 20
   actualspeed: 0
+  burried: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 513
@@ -1040,6 +1041,7 @@ MonoBehaviour:
   planterAura: {fileID: 0}
   auraRenderer: {fileID: 0}
   radius: 5
+  planting: 0
   auraGrowTime: 2.3599999
   auraShrinkTime: .300000012
   camera: {fileID: 670914721}
@@ -1567,11 +1569,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: afe5736211658724880f0cf74fd28d92, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.09326935
+      value: -2.83522701
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: afe5736211658724880f0cf74fd28d92, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 71.804306
+      value: 8.92510796
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: afe5736211658724880f0cf74fd28d92, type: 2}
       propertyPath: m_LocalPosition.z
