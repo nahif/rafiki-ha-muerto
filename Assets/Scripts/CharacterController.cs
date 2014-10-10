@@ -14,7 +14,6 @@ public class CharacterController : MonoBehaviour {
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
 	Transform groundCheck;
-
 	//Cambios comportamiento segun piso
 	GroundCheckController gcc;
 
@@ -23,6 +22,8 @@ public class CharacterController : MonoBehaviour {
 	void Start(){
 		anim = GetComponent<Animator> ();
 		gcc = (GroundCheckController) GameObject.Find("GroundCheck").GetComponent("GroundCheckController");
+		Physics2D.IgnoreLayerCollision (LayerMask.NameToLayer("Interact"),LayerMask.NameToLayer("Ignore Raycast"),true);
+		//Esto ignora la colision del personaje (Que esta en IGnore Raycast) y las semillas
 	}
 
 	void  Awake() {
@@ -57,7 +58,8 @@ public class CharacterController : MonoBehaviour {
 			Flip();
 		}
 		if(grounded) {
-			RaycastHit2D hit = Physics2D.Raycast (transform.position, -transform.up);
+			int layermask=~((1<<LayerMask.NameToLayer("Interact")) | Physics2D.IgnoreRaycastLayer); //VA A IGNORAR INTERACT O PODEMOS PONER QUE SOLO PESQUE GROUND Y COLISION
+			RaycastHit2D hit = Physics2D.Raycast (transform.position, -transform.up,Mathf.Infinity,layermask);
 			if (hit.collider != null && hit.collider.tag!="Player") {
 				//Debug.Log(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI);
 				float angle=transform.eulerAngles.z;
@@ -107,4 +109,6 @@ public class CharacterController : MonoBehaviour {
 	void GoOut() {
 		burried = false;
 	}
+
+
 }

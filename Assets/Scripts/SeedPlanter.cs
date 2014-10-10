@@ -46,7 +46,7 @@ public class SeedPlanter : MonoBehaviour {
 							if(mb is ISeed){
 								ISeed seed= mb as ISeed;
 								myCollectedObject=seed.onCollect();
-								break; //Solo queremos una.
+								break; //Solo queremos una. (SE PUEDE MEJORAR SELECCIONANDO LA MAS CERCANA)
 							}
 						}
 						if(myCollectedObject!=null)break; //Por el doble Foreach
