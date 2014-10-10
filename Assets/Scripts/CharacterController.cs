@@ -4,7 +4,7 @@ using System.Collections;
 public class CharacterController : MonoBehaviour {
 
 	public float maxspeed=10f;
-	public float deathChangeSpeed = 20f;
+	public float deathChangeSpeed = 40f;
 	public float actualspeed=0;
 	private float lastYSpeed;
 	public bool burried = false;
@@ -50,6 +50,7 @@ public class CharacterController : MonoBehaviour {
 		}
 
 		anim.SetFloat ("Speed",Mathf.Abs( maxspeed * move));
+		anim.speed = Mathf.Abs (maxspeed * move)/5;
 
 		if (move > 0 && !facingRight) {
 			Flip();		
@@ -70,6 +71,7 @@ public class CharacterController : MonoBehaviour {
 			}
 
 		} else {
+			anim.SetFloat ("Speed",0);
 			transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 		}
 	}
