@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour {
 	public bool burried = false;
 	bool facingRight=false;
 	Animator anim;
+	Animator Mainanim;
 	bool grounded;
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
@@ -20,7 +21,8 @@ public class CharacterController : MonoBehaviour {
 
 
 	void Start(){
-		anim = GetComponent<Animator> ();
+		Mainanim = GetComponent<Animator> ();
+		anim = GameObject.Find("cuerpo").GetComponent<Animator> ();
 		gcc = (GroundCheckController) GameObject.Find("GroundCheck").GetComponent("GroundCheckController");
 		Physics2D.IgnoreLayerCollision (LayerMask.NameToLayer("Interact"),LayerMask.NameToLayer("Ignore Raycast"),true);
 		//Esto ignora la colision del personaje (Que esta en IGnore Raycast) y las semillas
@@ -104,12 +106,16 @@ public class CharacterController : MonoBehaviour {
 
 	void Dig() {
 		burried = true;
+		rigidbody2D.isKinematic = true;
+		Mainanim.SetBool ("Dig", true);
 		//CAMBIAR ANIMACION
 
 	}
 
 	void GoOut() {
 		burried = false;
+		rigidbody2D.isKinematic = false;
+		Mainanim.SetBool ("Dig", false);
 	}
 
 

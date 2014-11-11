@@ -71,8 +71,8 @@ TextureImporter:
         y: 3000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_1
       rect:
@@ -81,8 +81,8 @@ TextureImporter:
         y: 3000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_2
       rect:
@@ -91,18 +91,18 @@ TextureImporter:
         y: 3000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_3
       rect:
         serializedVersion: 2
-        x: 3010
+        x: 3004
         y: 3000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_4
       rect:
@@ -111,8 +111,8 @@ TextureImporter:
         y: 3000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_5
       rect:
@@ -121,8 +121,8 @@ TextureImporter:
         y: 2000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_6
       rect:
@@ -131,8 +131,8 @@ TextureImporter:
         y: 2000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_7
       rect:
@@ -141,8 +141,8 @@ TextureImporter:
         y: 2000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_8
       rect:
@@ -151,18 +151,18 @@ TextureImporter:
         y: 2000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_9
       rect:
         serializedVersion: 2
-        x: 4001
-        y: 2000
+        x: 4000
+        y: 2006
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_16
       rect:
@@ -171,8 +171,8 @@ TextureImporter:
         y: 1000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_17
       rect:
@@ -181,8 +181,8 @@ TextureImporter:
         y: 1000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_18
       rect:
@@ -191,8 +191,8 @@ TextureImporter:
         y: 1000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_19
       rect:
@@ -201,8 +201,8 @@ TextureImporter:
         y: 1000
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_10
       rect:
@@ -211,8 +211,8 @@ TextureImporter:
         y: 1010
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_11
       rect:
@@ -221,8 +221,8 @@ TextureImporter:
         y: 0
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_12
       rect:
@@ -231,8 +231,8 @@ TextureImporter:
         y: 0
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_13
       rect:
@@ -241,8 +241,8 @@ TextureImporter:
         y: 0
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_14
       rect:
@@ -251,8 +251,8 @@ TextureImporter:
         y: 0
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ciclo caminata completo_15
       rect:
@@ -261,8 +261,8 @@ TextureImporter:
         y: 0
         width: 1000
         height: 1000
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

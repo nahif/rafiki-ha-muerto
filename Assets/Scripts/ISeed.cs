@@ -4,6 +4,6 @@ public interface ISeed {
 	void shrink();
 	void shine();
 	void interact();
-	void onPlant();
+	void onPlant(Vector3 v);
 	GameObject onCollect();
 }
