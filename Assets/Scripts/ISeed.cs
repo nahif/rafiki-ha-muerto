@@ -5,5 +5,7 @@ public interface ISeed {
 	void shine();
 	void interact();
 	void onPlant(Vector3 v);
+	bool isPlanted();
 	GameObject onCollect();
+
 }

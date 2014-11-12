@@ -16,7 +16,7 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 	#region chequeador de suelos
 
 	private bool puedeCrecer = false;
-	private bool isPlanted=false;
+	private bool Planted=false;
 	private Vector3 plantVector;
 	public string debugS = "";
 
@@ -38,7 +38,7 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 
 	public void grow ()
 	{
-		if (puedeCrecer & isPlanted) {
+		if (puedeCrecer & Planted) {
 			Instantiate (plant, (transform.position+plantVector), Quaternion.identity);
 			Destroy (this.gameObject);
 		}
@@ -63,15 +63,18 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 	{
 		plantVector = pox;
 		rigidbody2D.isKinematic = true;
-		isPlanted = true;
+		Planted = true;
 	}
 
 	public GameObject onCollect ()
 	{
-		if (isPlanted)
-						return null;
 			this.gameObject.active=false;
+			Planted = false;
+			rigidbody2D.isKinematic = false;
 			return this.gameObject;
+	}
+	public bool isPlanted(){
+		return Planted;
 	}
 
 	#endregion
