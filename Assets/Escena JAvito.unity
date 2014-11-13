@@ -310,6 +310,7 @@ GameObject:
   - 58: {fileID: 509458979}
   - 50: {fileID: 509458978}
   - 114: {fileID: 509458977}
+  - 114: {fileID: 509458982}
   m_Layer: 12
   m_Name: Champi
   m_TagString: Untagged
@@ -392,6 +393,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1544247816}
   m_RootOrder: 0
+--- !u!114 &509458982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509458976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d122c555213b94e9e7df9edc5d0101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &581201519
 GameObject:
   m_ObjectHideFlags: 0

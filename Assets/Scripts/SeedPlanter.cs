@@ -41,8 +41,9 @@ public class SeedPlanter : MonoBehaviour
 						foreach (MonoBehaviour mb in list) {
 								if (mb is ISeed) {
 										ISeed seed = mb as ISeed;
-					Debug.Log(isBurried + " " + seed.isPlanted());
-										if (!isBurried && seed.isPlanted ())continue;
+										Debug.Log (isBurried + " " + seed.isPlanted ());
+										if (!isBurried && seed.isPlanted ())
+												continue;
 										myCollectedObject = seed.onCollect ();
 										break; //Solo queremos una. (SE PUEDE MEJORAR SELECCIONANDO LA MAS CERCANA)
 								}
@@ -83,10 +84,23 @@ public class SeedPlanter : MonoBehaviour
 								foreach (Collider2D CSeed in Seeds) {
 										MonoBehaviour[] list = CSeed.gameObject.GetComponents<MonoBehaviour> ();
 										foreach (MonoBehaviour mb in list) {
-												if (mb is ISeed) {
+						if (!Input.GetKey (KeyCode.DownArrow) && mb is ISeed) {
 														ISeed seed = mb as ISeed;
 														seed.shine (); // Esto deberia estar en PLANTING por que la idea es que "Brille" al seleccionarlo.
 														seed.grow ();
+												}
+												if (Input.GetKey (KeyCode.DownArrow) && mb is IPlant) {
+														IPlant plant = mb as IPlant;
+														plant.Sel ();
+														GameObject seed = Resources.Load ("Prefabs/Semilla") as GameObject;
+														Transform seed2 = (Instantiate (seed) as GameObject).transform;
+														ExampleSeed exseed = seed2.GetComponent<ExampleSeed> ();
+														exseed.wasPlant = true;
+														exseed.plant = plant.GetComponent<Transform> ();
+														seed2.transform.position = plant.transform.position;
+														plant.gameObject.SetActive (false);
+														Debug.Log ("Vuelve planta a semilla");
+														//CREAR UNA SEED Y agregarle la planta.
 												}
 										}
 								}
