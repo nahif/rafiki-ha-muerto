@@ -14,7 +14,9 @@ public class CharacterController : MonoBehaviour {
 	bool grounded;
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
+	[SerializeField] LayerMask whatIsPlatform;
 	Transform groundCheck;
+	Transform headCheck;
 	//Cambios comportamiento segun piso
 	GroundCheckController gcc;
 
@@ -30,6 +32,7 @@ public class CharacterController : MonoBehaviour {
 
 	void  Awake() {
 		groundCheck = transform.Find ("GroundCheck");
+		headCheck = transform.Find ("HeadCheck");
 	}
 	
 	// Update is called once per frame
@@ -76,6 +79,21 @@ public class CharacterController : MonoBehaviour {
 			anim.SetFloat ("Speed",0);
 			transform.rotation=Quaternion.AngleAxis(0, Vector3.up);
 		}
+		RaycastHit2D obj_below = Physics2D.Raycast (groundCheck.position, -Vector2.up, 1f, whatIsPlatform);
+		RaycastHit2D obj_between = Physics2D.Raycast (headCheck.position, -Vector2.up, 3f, whatIsPlatform);		
+		RaycastHit2D obj_up = Physics2D.Raycast (headCheck.position, Vector2.up, 1f, whatIsPlatform);
+		//bool colBelow = (obj_below.collider.transform.position.y + obj_below.collider.bounds.size.y / 2 < groundCheck.position.y);
+        
+		if(obj_up.transform!=null){    
+			obj_up.collider.isTrigger=true;    
+		}
+		if(obj_between.transform!=null){    
+			obj_between.collider.isTrigger=true;    
+        }
+		if(obj_below.transform!=null && (obj_below.collider.transform.position.y + obj_below.collider.bounds.size.y / 2 < groundCheck.position.y)){ 
+			obj_below.collider.isTrigger=false; 
+        }
+	
 	}
 	
 	void Update () {
@@ -89,6 +107,11 @@ public class CharacterController : MonoBehaviour {
         }
 		if (burried && Input.GetKeyDown(KeyCode.UpArrow)) {
 			GoOut();
+		}
+		if (rigidbody2D.velocity.y <= 0) {
+			headCheck.GetComponent<CircleCollider2D>().isTrigger = true;
+		} else {
+			headCheck.GetComponent<CircleCollider2D>().isTrigger = false;
 		}
 
 	}
@@ -117,6 +140,18 @@ public class CharacterController : MonoBehaviour {
 		rigidbody2D.isKinematic = false;
 		Mainanim.SetBool ("Dig", false);
 	}
+
+	void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.gameObject.tag == "switch") {
+			Debug.Log ("Switch");
+			MonoBehaviour[] list = coll.gameObject.GetComponents<MonoBehaviour> ();
+			foreach (MonoBehaviour mb in list) {
+				if (mb is Switch && !(mb as Switch).isSwitched) {
+					(mb as Switch).switchThisMotherfucker();
+				}
+			}
+        }
+    }
 
 
 }
