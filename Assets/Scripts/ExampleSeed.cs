@@ -19,6 +19,7 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 	private bool Planted=false;
 	private Vector3 plantVector;
 	public string debugS = "";
+	public bool wasPlant=false;
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.collider2D.sharedMaterial != null &&  coll.gameObject.collider2D.sharedMaterial.name.CompareTo("SueloFertil") == 0) {
@@ -39,7 +40,13 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 	public void grow ()
 	{
 		if (puedeCrecer & Planted) {
+			if(wasPlant==false){
 			Instantiate (plant, (transform.position+plantVector), Quaternion.identity);
+			}
+			else{
+				plant.gameObject.SetActive(true);
+				plant.transform.position=transform.position+plantVector;
+			}
 			Destroy (this.gameObject);
 		}
 	}
@@ -68,7 +75,7 @@ public class ExampleSeed : MonoBehaviour, ISeed {
 
 	public GameObject onCollect ()
 	{
-			this.gameObject.active=false;
+		this.gameObject.SetActive (false);
 			Planted = false;
 			rigidbody2D.isKinematic = false;
 			return this.gameObject;

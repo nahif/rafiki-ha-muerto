@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Champinon : MonoBehaviour {
+public class Champinon : MonoBehaviour{
 	// Use this for initialization
 	void Start () {
-	
+		gameObject.AddComponent<IPlant> ();
 	}
 	
 	// Update is called once per frame
