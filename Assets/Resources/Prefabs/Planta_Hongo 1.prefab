@@ -9,10 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  m_Layer: 11
+  - 68: {fileID: 6800000}
+  m_Layer: 12
   m_Name: Champi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 0
-  m_Name: Planta_Hongo
+  m_Layer: 12
+  m_Name: Planta_Hongo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0173149109, y: .587458611, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.0273780823, y: .848109722, z: 0}
+  m_LocalScale: {x: .984667182, y: .984667182, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 0
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.02990961, y: 4.19712114, z: 0}
+  m_LocalPosition: {x: -5.78837872, y: 4.18140554, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -74,8 +74,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5800000
-CircleCollider2D:
+--- !u!68 &6800000
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -83,8 +83,13 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: cca3021f29a255045a8e25b218939bfb, type: 2}
   m_IsTrigger: 0
-  m_Radius: 1.49000001
-  m_Center: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.39998579, y: .494140744}
+  - {x: -1.20268714, y: .967020929}
+  - {x: -.82360518, y: 1.30606258}
+  - {x: .636345804, y: 1.35888743}
+  - {x: 1.16236508, y: .907342851}
+  - {x: 1.36468983, y: .388252914}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
