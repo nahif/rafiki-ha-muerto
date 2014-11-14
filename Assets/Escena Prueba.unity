@@ -184,7 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &66603847
 SpriteRenderer:
@@ -855,11 +854,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.0836124
+      value: 25.0783348
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.32859325
+      value: 1.87141037
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -887,7 +886,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: m_Name
-      value: Mockle
+      value: cuerpo
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: camera
@@ -899,11 +898,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: m_LocalScale.x
-      value: .264946848
+      value: .257998198
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
       propertyPath: m_LocalScale.y
-      value: .264946759
+      value: .257998109
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
+      propertyPath: aura
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
+      propertyPath: auraRenderer
+      value: 
+      objectReference: {fileID: 444993071}
+    - target: {fileID: 400000, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.26433706
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .486425519
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
+      propertyPath: m_Center.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3bec91828317d742afab4ff6cddc5b4, type: 2}
@@ -982,7 +1005,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &424587030
 SpriteRenderer:
@@ -1187,7 +1209,7 @@ Transform:
   m_PrefabInternal: {fileID: 379670435}
   m_GameObject: {fileID: 499812620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0822705403, y: -4.9000001, z: 0}
+  m_LocalPosition: {x: -1.26433706, y: .486425519, z: 0}
   m_LocalScale: {x: 1.19264221, y: 1.19264293, z: 1}
   m_Children: []
   m_Father: {fileID: 1217804299}
@@ -1423,7 +1445,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 400014, guid: adcae6d1b0ad05c4f865020c531644cf, type: 2}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &594509657
 SpriteRenderer:
@@ -2253,7 +2274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 400014, guid: adcae6d1b0ad05c4f865020c531644cf, type: 2}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &783373108
 SpriteRenderer:
@@ -2362,7 +2382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &873591853
 SpriteRenderer:
@@ -2447,7 +2466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 400014, guid: adcae6d1b0ad05c4f865020c531644cf, type: 2}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &877853340
 SpriteRenderer:
@@ -2728,7 +2746,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &985358931
 SpriteRenderer:
@@ -3177,7 +3194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &1093191292
 SpriteRenderer:
@@ -3303,7 +3319,7 @@ GameObject:
   - 114: {fileID: 1217804303}
   - 95: {fileID: 1217804304}
   m_Layer: 2
-  m_Name: Mockle
+  m_Name: cuerpo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3339,8 +3355,8 @@ Transform:
   m_PrefabInternal: {fileID: 379670435}
   m_GameObject: {fileID: 1217804297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.0836124, y: 2.32859325, z: 0}
-  m_LocalScale: {x: .264946848, y: .264946759, z: 1}
+  m_LocalPosition: {x: 25.0783348, y: 1.87141037, z: 0}
+  m_LocalScale: {x: .257998198, y: .257998109, z: 1}
   m_Children:
   - {fileID: 499812621}
   - {fileID: 1303607250}
@@ -3358,7 +3374,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: 1.95000005
-  m_Center: {x: .270000011, y: -2.91000009}
+  m_Center: {x: 0, y: 2}
 --- !u!50 &1217804301
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -3408,7 +3424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aura: {fileID: 0}
   planterAura: {fileID: 0}
-  auraRenderer: {fileID: 0}
+  auraRenderer: {fileID: 444993071}
   radius: 5
   planting: 0
   auraGrowTime: 2.3599999
@@ -3885,7 +3901,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303607249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.02745533, y: 3.9270463, z: 0}
+  m_LocalPosition: {x: 7.56609821, y: 9.5827961, z: 0}
   m_LocalScale: {x: 2.72118211, y: 2.72118258, z: 1}
   m_Children:
   - {fileID: 173238959}
@@ -3965,7 +3981,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &1327529840
 SpriteRenderer:
@@ -4358,7 +4373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &1431919099
 SpriteRenderer:
@@ -4687,7 +4701,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 400002, guid: ff76516973cea37409e4ed8d647b8e03, type: 2}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &1629634795
 SpriteRenderer:
@@ -4970,7 +4983,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 1467130874}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &1703042430
 SpriteRenderer:
@@ -5099,7 +5111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 400014, guid: adcae6d1b0ad05c4f865020c531644cf, type: 2}
-  puedeCrecer: 0
   debugS: 
 --- !u!212 &1735449344
 SpriteRenderer:
@@ -5229,7 +5240,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1792450036}
   m_LocalRotation: {x: 0, y: 0, z: .0944331661, w: .995531201}
-  m_LocalPosition: {x: 5.22310257, y: .832292616, z: .607555389}
+  m_LocalPosition: {x: 5.3577652, y: 5.81474257, z: .607555389}
   m_LocalScale: {x: .861799181, y: .861801088, z: 1}
   m_Children: []
   m_Father: {fileID: 1217804299}
