@@ -325,6 +325,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!58 &186137968
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -746,6 +747,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &307391839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +857,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609336326}
   m_LocalRotation: {x: 0, y: 0, z: .0929766297, w: -.995668352}
-  m_LocalPosition: {x: 22.4297619, y: -.164748669, z: 0}
+  m_LocalPosition: {x: 22.4297619, y: -.116310075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1101103582}
@@ -874,7 +876,7 @@ PolygonCollider2D:
     - - {x: 1.95654762, y: -.153467283}
       - {x: .933292806, y: .220547169}
       - {x: -.597573936, y: .236560389}
-      - {x: -1.2034862, y: .228289828}
+      - {x: -1.24937904, y: .09196762}
       - {x: -.75, y: -.735000014}
       - {x: .75, y: -.735000014}
       - {x: 5.3827486, y: -4.92994118}
