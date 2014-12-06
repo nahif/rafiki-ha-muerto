@@ -2,6 +2,12 @@
 using System.Collections;
 
 public class IPlant : MonoBehaviour {
+	public enum Type {
+		normal,
+		champinon
+	}
+	
+	public Type type;
 
 	// Use this for initialization
 	void Start () {

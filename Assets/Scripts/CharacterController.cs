@@ -11,15 +11,14 @@ public class CharacterController : MonoBehaviour {
 	bool facingRight=false;
 	Animator anim;
 	Animator Mainanim;
-	bool grounded;
-	bool justGrounded;
+	public bool grounded;
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
 	[SerializeField] LayerMask whatIsPlatform;
 	Transform groundCheck;
 	Transform headCheck;
 	//Cambios comportamiento segun piso
-	GroundCheckController gcc;
+	public GroundCheckController gcc;
 	
 	
 	
@@ -54,6 +53,7 @@ public class CharacterController : MonoBehaviour {
 		//Movimiento horizontal
 		if (burried) return;
 		float move = Input.GetAxis ("Horizontal");
+
 		string materialName = gcc.materialName;
 		if (materialName == "Vacio") {
 			rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
@@ -121,13 +121,15 @@ public class CharacterController : MonoBehaviour {
 		if (!burried &&(grounded) && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.AddForce (transform.up * 500);
 		}
-		if (gcc.materialName != "Plant" && !GetComponent<SeedPlanter>().planting && 
-		    !burried && (grounded) && Input.GetKeyDown (KeyCode.DownArrow)) {
-			Dig();
-		}
-		if (burried && Input.GetKeyDown(KeyCode.UpArrow)) {
+		/*if (gcc.materialName != "Plant" && !GetComponent<SeedPlanter>().planting && 
+		    !burried && (grounded) && Input.GetKey (KeyCode.DownArrow)) {
+			if (Input.GetKeyDown(KeyCode.Z)) {
+				Dig();
+			}
+		}*/
+		/*if (burried && Input.GetKeyDown(KeyCode.UpArrow)) {
 			GoOut();
-		}
+		}*/
 		if (rigidbody2D.velocity.y <= 0) {
 			headCheck.GetComponent<CircleCollider2D>().isTrigger = true;
 		} else {
@@ -145,20 +147,6 @@ public class CharacterController : MonoBehaviour {
 	void Die() {
 		Transform respawner = GameObject.FindGameObjectWithTag ("Respawn").transform;
 		transform.position = respawner.position;
-	}
-	
-	void Dig() {
-		burried = true;
-		rigidbody2D.isKinematic = true;
-		Mainanim.SetBool ("Dig", true);
-		//CAMBIAR ANIMACION
-		
-	}
-	
-	void GoOut() {
-		burried = false;
-		rigidbody2D.isKinematic = false;
-		Mainanim.SetBool ("Dig", false);
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll) {
