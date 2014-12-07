@@ -20,8 +20,8 @@ public class CamaraBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var x = transform.position.x;
-		var y = transform.position.y;
+		//float x = transform.position.x;
+	//	float y = transform.position.y;
 		/*if (IsFollowing) {
 			Debug.Log ("hola");
 			if(Mathf.Abs(x - Player.position.x) > Margin.x)
@@ -36,11 +36,10 @@ public class CamaraBehaviour : MonoBehaviour {
 		y = Mathf.Clamp (y, _min.y + camera.orthographicSize, _max.y - camera.orthographicSize);
 		*/
 		
-		x = Mathf.Lerp(x, Player.position.x,Smoothing.x * Time.deltaTime);
-		y = Mathf.Lerp(y, Player.position.y,Smoothing.y * Time.deltaTime);
-		
-		//x = Player.position.x;
-		//y = Player.position.y;
+	//	x = Mathf.Lerp(x, Player.position.x,Smoothing.x * Time.deltaTime);
+	//	y = Mathf.Lerp (y, Player.position.y, Smoothing.y * Time.deltaTime);
+		float x = Player.position.x;
+		float y = Player.position.y+3;
 		
 		
 		
