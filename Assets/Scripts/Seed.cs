@@ -76,6 +76,9 @@ public class Seed : MonoBehaviour {
 	
 	public GameObject onCollect ()
 	{
+		GameObject particulas = Resources.Load ("Prefabs/GrabSeedEx") as GameObject;
+		Transform particulasIns = (Instantiate (particulas) as GameObject).transform;
+		particulasIns.transform.position = new Vector3(this.transform.position.x,this.transform.position.y,10);
 		this.gameObject.SetActive (false);
 		Planted = false;
 		rigidbody2D.isKinematic = false;
