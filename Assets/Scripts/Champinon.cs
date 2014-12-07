@@ -21,7 +21,6 @@ public class Champinon : MonoBehaviour{
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-
 		anim.SetBool ("Jump", true);
 		float nX = Mathf.Min (1.5f * other.gameObject.rigidbody2D.velocity.x, 20f);
 		float nY = Mathf.Min (1.5f * other.gameObject.rigidbody2D.velocity.y, 20f);
