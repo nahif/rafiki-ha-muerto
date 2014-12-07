@@ -166,15 +166,19 @@ public class SeedPlanter : MonoBehaviour
 
 
 	public IEnumerator Plant() {
-		Dig();
-		yield return new WaitForSeconds(1f);
-		plantASeed();
+		if (seeds [seedIndex] > 0) {
+						Dig ();
+						yield return new WaitForSeconds (1f);
+						plantASeed ();
 
-		GoOut(); //Hay que animar esto
+						GoOut (); //Hay que animar esto
+		} else {
+			Debug.Log("No queda de este tipo de semillas");
+		}
 	}
 
 	void plantASeed() {
-		if (seeds[seedIndex] > 0) {
+
 			GameObject seed = null;
 			switch(seedIndex) {
 			case 0:
@@ -194,9 +198,7 @@ public class SeedPlanter : MonoBehaviour
 			seedController.grow();
 			Destroy(realSeed);
 
-        } else {
-			Debug.Log("No queda de este tipo de semillas");
-		}
+        
     }
 
 	void Dig() {
