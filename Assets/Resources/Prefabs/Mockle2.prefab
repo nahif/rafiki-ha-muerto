@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.7014771, y: 3.3214016, z: -.00561523438}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .654530644, y: .774999857, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -226,6 +226,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9500002
 Animator:
   serializedVersion: 3
@@ -240,6 +241,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,12 +304,14 @@ MonoBehaviour:
   deathChangeSpeed: 174.5
   actualspeed: 0
   burried: 1
+  grounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 6657
   whatIsPlatform:
     serializedVersion: 2
     m_Bits: 4096
+  gcc: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
