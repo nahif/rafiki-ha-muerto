@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4159384, y: 10.5052681, z: 0}
+  m_LocalPosition: {x: 5.55820227, y: 2.75029922, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c353da5557f304294d94aae9a2431e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 400002, guid: 9cea42d559228284bbeda04d850fc8a5, type: 2}
+  plant: {fileID: 400004, guid: 0fcc64e621002a148a61167be95ce43d, type: 2}
   debugS: 
   wasPlant: 0
 --- !u!212 &21200000

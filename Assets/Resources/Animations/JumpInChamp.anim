@@ -1,0 +1,463 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: JumpInChamp
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 1, z: 4}
+        inSlope: {x: 0, y: -1.99999988, z: 0}
+        outSlope: {x: 0, y: -1.99999988, z: 0}
+        tangentMode: 7304293
+      - time: .100000001
+        value: {x: 0, y: .800000012, z: 4}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 649021988
+      - time: .200000003
+        value: {x: 0, y: 1, z: 4}
+        inSlope: {x: 0, y: .99999994, z: 0}
+        outSlope: {x: 0, y: .99999994, z: 0}
+        tangentMode: 95
+      - time: .349999994
+        value: {x: 0, y: 1, z: 4}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 51
+      - time: 1.81666672
+        value: {x: 0, y: 1, z: 4}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 3
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: hongo arriba
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 1, z: 5}
+        inSlope: {x: .777280331, y: 0, z: 0}
+        outSlope: {x: .777280331, y: 0, z: 0}
+        tangentMode: 0
+      - time: .100000001
+        value: {x: .0777280331, y: 1, z: 5}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 654817440
+      - time: .200000003
+        value: {x: 0, y: 1, z: 5}
+        inSlope: {x: -.388640165, y: 0, z: 0}
+        outSlope: {x: -.388640165, y: 0, z: 0}
+        tangentMode: 95
+      - time: .349999994
+        value: {x: 0, y: 1, z: 5}
+        inSlope: {x: -6.76460186e-05, y: 0, z: 0}
+        outSlope: {x: -6.76460186e-05, y: 0, z: 0}
+        tangentMode: 1869563508
+      - time: 1.81666672
+        value: {x: -.00019842833, y: 1, z: 5}
+        inSlope: {x: -.000135292037, y: 0, z: 0}
+        outSlope: {x: -.000135292037, y: 0, z: 0}
+        tangentMode: 111
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: hongo base
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 2.83383369, y: .793030262, z: 0}
+        outSlope: {x: 2.83383369, y: .793030262, z: 0}
+        tangentMode: 0
+      - time: .100000001
+        value: {x: 1.28338337, y: 1.07930303, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 1635013492
+      - time: .200000003
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: -1.41691685, y: -.396515131, z: 0}
+        outSlope: {x: -1.41691685, y: -.396515131, z: 0}
+        tangentMode: 0
+      - time: .349999994
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: -.000246620999, y: -6.90059242e-05, z: 0}
+        outSlope: {x: -.000246620999, y: -6.90059242e-05, z: 0}
+        tangentMode: 15
+      - time: 1.81666672
+        value: {x: .999276578, y: .999797583, z: 1}
+        inSlope: {x: -.000493241998, y: -.000138011848, z: 0}
+        outSlope: {x: -.000493241998, y: -.000138011848, z: 0}
+        tangentMode: 128476564
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: hongo base
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 201933377
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4035121555
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4035121555
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: 1.81666672
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .100000001
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .349999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.81666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: hongo arriba
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -1.99999988
+        outSlope: -1.99999988
+        tangentMode: 10
+      - time: .100000001
+        value: .800000012
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 1
+        inSlope: .99999994
+        outSlope: .99999994
+        tangentMode: 10
+      - time: .349999994
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.81666672
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: hongo arriba
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .100000001
+        value: 4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .349999994
+        value: 4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.81666672
+        value: 4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: hongo arriba
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .777280331
+        outSlope: .777280331
+        tangentMode: 10
+      - time: .100000001
+        value: .0777280331
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 0
+        inSlope: -.388640165
+        outSlope: -.388640165
+        tangentMode: 10
+      - time: .349999994
+        value: 0
+        inSlope: -6.76460186e-05
+        outSlope: -6.76460186e-05
+        tangentMode: 10
+      - time: 1.81666672
+        value: -.00019842833
+        inSlope: -.000135292037
+        outSlope: -.000135292037
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: hongo base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .100000001
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .349999994
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.81666672
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: hongo base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .100000001
+        value: 5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .349999994
+        value: 5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.81666672
+        value: 5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: hongo base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 2.83383369
+        outSlope: 2.83383369
+        tangentMode: 10
+      - time: .100000001
+        value: 1.28338337
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 1
+        inSlope: -1.41691685
+        outSlope: -1.41691685
+        tangentMode: 10
+      - time: .349999994
+        value: 1
+        inSlope: -.000246620999
+        outSlope: -.000246620999
+        tangentMode: 10
+      - time: 1.81666672
+        value: .999276578
+        inSlope: -.000493241998
+        outSlope: -.000493241998
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.x
+    path: hongo base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: .793030262
+        outSlope: .793030262
+        tangentMode: 10
+      - time: .100000001
+        value: 1.07930303
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 1
+        inSlope: -.396515131
+        outSlope: -.396515131
+        tangentMode: 10
+      - time: .349999994
+        value: 1
+        inSlope: -6.90059242e-05
+        outSlope: -6.90059242e-05
+        tangentMode: 10
+      - time: 1.81666672
+        value: .999797583
+        inSlope: -.000138011848
+        outSlope: -.000138011848
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.y
+    path: hongo base
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .100000001
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .200000003
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .349999994
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.81666672
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalScale.z
+    path: hongo base
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves: []
+  m_Events: []
