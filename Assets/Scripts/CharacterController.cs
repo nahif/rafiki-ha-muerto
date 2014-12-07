@@ -38,83 +38,83 @@ public class CharacterController : MonoBehaviour {
 	float t = 0f;
 	float lastAngle = 0f;
 	void FixedUpdate () {
-		if (Mathf.Abs (rigidbody2D.velocity.y - lastYSpeed) >= deathChangeSpeed)
-			Die ();
-		lastYSpeed = rigidbody2D.velocity.y;
-		if (Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround)) {
-			if (!grounded) {
-				grounded = true;
-			}
-			t=0f;
-		} else {
-			if (grounded) t=0f;
-			grounded = false;
-		}
-		//Movimiento horizontal
-		if (burried) return;
-		float move = Input.GetAxis ("Horizontal");
-
-		string materialName = gcc.materialName;
-		if (materialName == "Vacio") {
-			rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
-		} else if (materialName == "Resbaladiso") {
-			gcc.delay = Mathf.Lerp (gcc.delay, maxspeed * move, gcc.friction * gcc.friction * Time.deltaTime);
-			rigidbody2D.velocity = new Vector2 (gcc.delay, rigidbody2D.velocity.y);
-		} else {
-			rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
-		}
-		
-		anim.SetFloat ("Speed",Mathf.Abs( maxspeed * move));
-		anim.speed = Mathf.Abs (maxspeed * move)/5;
-		
-		if (move > 0 && !facingRight) {
-			Flip();		
-		}
-		else if(move<0 && facingRight){
-			Flip();
-		}
-		if(grounded) {
-			int layermask=~((1<<LayerMask.NameToLayer("Interact")) | Physics2D.IgnoreRaycastLayer); //VA A IGNORAR INTERACT O PODEMOS PONER QUE SOLO PESQUE GROUND Y COLISION
-			RaycastHit2D hit = Physics2D.Raycast (groundCheck.position, -transform.up,1f,layermask);
-			if (hit.collider != null && hit.collider.tag!="Player") {
-				//Debug.Log(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI);
-				float angle=transform.eulerAngles.z;
-				float angle2=Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI-45;
-				if (lastAngle != angle2) { //Cambio de angulo
-					t += Time.deltaTime;
-					Quaternion quat = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle2,Vector3.forward), t/0.2f);
-					float newAngle = quat.eulerAngles.z;
-					transform.rotation = quat;
-					lastAngle = newAngle;
+				if (Mathf.Abs (rigidbody2D.velocity.y - lastYSpeed) >= deathChangeSpeed)
+						Die ();
+				lastYSpeed = rigidbody2D.velocity.y;
+				if (Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround)) {
+						if (!grounded) {
+								grounded = true;
+						}
+						t = 0f;
+				} else {
+						if (grounded)
+								t = 0f;
+						grounded = false;
 				}
+				//Movimiento horizontal
+				if (burried)
+						return;
+				float move = Input.GetAxis ("Horizontal");
+
+				string materialName = gcc.materialName;
+				if (materialName == "Vacio") {
+						rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
+				} else if (materialName == "Resbaladiso") {
+						gcc.delay = Mathf.Lerp (gcc.delay, maxspeed * move, gcc.friction * gcc.friction * Time.deltaTime);
+						rigidbody2D.velocity = new Vector2 (gcc.delay, rigidbody2D.velocity.y);
+				} else {
+						rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
+				}
+		
+				anim.SetFloat ("Speed", Mathf.Abs (maxspeed * move));
+				anim.speed = Mathf.Abs (maxspeed * move) / 5;
+		
+				if (move > 0 && !facingRight) {
+						Flip ();		
+				} else if (move < 0 && facingRight) {
+						Flip ();
+				}
+				if (grounded) {
+						int layermask = ~((1 << LayerMask.NameToLayer ("Interact")) | Physics2D.IgnoreRaycastLayer); //VA A IGNORAR INTERACT O PODEMOS PONER QUE SOLO PESQUE GROUND Y COLISION
+						RaycastHit2D hit = Physics2D.Raycast (groundCheck.position, -transform.up, 1f, layermask);
+						if (hit.collider != null && hit.collider.tag != "Player") {
+								//Debug.Log(Mathf.Atan2(hit.normal.y,hit.normal.x)*90/Mathf.PI);
+								float angle = transform.eulerAngles.z;
+								float angle2 = Mathf.Atan2 (hit.normal.y, hit.normal.x) * 90 / Mathf.PI - 45;
+								if (lastAngle != angle2) { //Cambio de angulo
+										t += Time.deltaTime;
+										Quaternion quat = Quaternion.Lerp (transform.rotation, Quaternion.AngleAxis (angle2, Vector3.forward), t / 0.2f);
+										float newAngle = quat.eulerAngles.z;
+										transform.rotation = quat;
+										lastAngle = newAngle;
+								}
 				
-				//if(angle<0)angle+=2*3.14f;
-				//if(angle2<0)angle2+=2*3.14f;
-				//transform.rotation=Quaternion.AngleAxis(angle2,Vector3.forward);
-			}
+								//if(angle<0)angle+=2*3.14f;
+								//if(angle2<0)angle2+=2*3.14f;
+								//transform.rotation=Quaternion.AngleAxis(angle2,Vector3.forward);
+						}
 			
-		} else {
+				} else {
 			
-			t += Time.deltaTime;
-			anim.SetFloat ("Speed",0);
-			transform.rotation= Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(0, Vector3.up), t/2f);
-		}
-		RaycastHit2D obj_below = Physics2D.Raycast (groundCheck.position, -Vector2.up, 1f, whatIsPlatform);
-		RaycastHit2D obj_between = Physics2D.Raycast (headCheck.position, -Vector2.up, 3f, whatIsPlatform);		
-		RaycastHit2D obj_up = Physics2D.Raycast (headCheck.position, Vector2.up, 1f, whatIsPlatform);
-		//bool colBelow = (obj_below.collider.transform.position.y + obj_below.collider.bounds.size.y / 2 < groundCheck.position.y);
+						t += Time.deltaTime;
+						anim.SetFloat ("Speed", 0);
+						transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.AngleAxis (0, Vector3.up), t / 2f);
+				}
+				RaycastHit2D obj_below = Physics2D.Raycast (groundCheck.position, -Vector2.up, 5f, whatIsPlatform);
+				RaycastHit2D obj_between = Physics2D.Raycast (headCheck.position, -Vector2.up, 2f, whatIsPlatform);		
+				RaycastHit2D obj_up = Physics2D.Raycast (headCheck.position, Vector2.up, 1f, whatIsPlatform);
+				//bool colBelow = (obj_below.collider.transform.position.y + obj_below.collider.bounds.size.y / 2 < groundCheck.position.y);
 		
-		if(obj_up.transform!=null){    
-			obj_up.collider.isTrigger=true;    
+				if (obj_up.transform != null) {    
+						obj_up.collider.isTrigger = true;    
+				}
+				if (obj_between.transform != null) {    
+						obj_between.collider.isTrigger = true;    
+				}
+		if (obj_below.transform != null ) { 
+						obj_below.collider.isTrigger = false; 
+				}
 		}
-		if(obj_between.transform!=null){    
-			obj_between.collider.isTrigger=true;    
-		}
-		if(obj_below.transform!=null && (obj_below.collider.transform.position.y + obj_below.collider.bounds.size.y / 2 < groundCheck.position.y)){ 
-			obj_below.collider.isTrigger=false; 
-		}
-		
-	}
 	
 	void Update () {
 		

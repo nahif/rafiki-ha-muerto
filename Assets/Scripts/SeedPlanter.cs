@@ -86,11 +86,7 @@ public class SeedPlanter : MonoBehaviour
 			if (cController.gcc.materialName != "Plant" && !planting && 
 			   	!cController.burried && cController.grounded && Input.GetKey (KeyCode.DownArrow)) {
 				if (Input.GetKeyDown(KeyCode.Z)) {
-                   	Dig();
-
-					plantASeed();
-
-					GoOut(); //Hay que animar esto
+					StartCoroutine("Plant");
                	}
             }
 			if (Input.GetKeyDown (KeyCode.C)) {
@@ -167,6 +163,16 @@ public class SeedPlanter : MonoBehaviour
 			}
 		}
 
+
+
+	public IEnumerator Plant() {
+		Dig();
+		yield return new WaitForSeconds(1f);
+		plantASeed();
+
+		GoOut(); //Hay que animar esto
+	}
+
 	void plantASeed() {
 		if (seeds[seedIndex] > 0) {
 			GameObject seed = null;
@@ -194,6 +200,7 @@ public class SeedPlanter : MonoBehaviour
     }
 
 	void Dig() {
+		cController.burried = true;
 		cController.rigidbody2D.isKinematic = true;
 		mainAnim.SetBool ("Dig", true);
 
@@ -203,7 +210,9 @@ public class SeedPlanter : MonoBehaviour
 	
 	void GoOut() {
 		rigidbody2D.isKinematic = false;
+		rigidbody2D.AddForce (new Vector2(0f, 500f));
         mainAnim.SetBool ("Dig", false);
+		cController.burried = false;
     }
 
 }

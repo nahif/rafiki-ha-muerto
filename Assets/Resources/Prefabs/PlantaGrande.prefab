@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HojaIzquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 233: {fileID: 23300000}
   - 231: {fileID: 23100000}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: hoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 50: {fileID: 5000002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PivoteHoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 50: {fileID: 5000004}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PivoteResorte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 50: {fileID: 5000006}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PivoteResorte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 50: {fileID: 5000008}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PivoteHoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 50: {fileID: 5000010}
   - 233: {fileID: 23300002}
   - 231: {fileID: 23100002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: hoja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400016}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HojaDerecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,6 +430,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
