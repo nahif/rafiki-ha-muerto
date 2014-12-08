@@ -68,7 +68,6 @@ public class CharacterController : MonoBehaviour {
 							anim.SetFloat("Speed", 0);
 					
 				}
-		
 				string materialName = gcc.materialName;
 				if (materialName == "Vacio") {
 						rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
@@ -88,8 +87,7 @@ public class CharacterController : MonoBehaviour {
 						Flip ();
 				}
 				if (grounded) {
-						anim.SetBool("inGround",true);
-						anim.SetBool("isJumpin",false);
+			anim.SetBool("isJumping",false);
 						int layermask = ~((1 << LayerMask.NameToLayer ("Interact")) | Physics2D.IgnoreRaycastLayer); //VA A IGNORAR INTERACT O PODEMOS PONER QUE SOLO PESQUE GROUND Y COLISION
 						RaycastHit2D hit = Physics2D.Raycast (groundCheck.position, -transform.up, 1f, layermask);
 						if (hit.collider != null && hit.collider.tag != "Player") {
@@ -136,7 +134,6 @@ public class CharacterController : MonoBehaviour {
 		if (!burried &&(grounded) && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.AddForce (transform.up * 500);
 			anim.SetBool("isJumping",true);
-			anim.SetBool("inGround",false);
 		}
 		/*if (gcc.materialName != "Plant" && !GetComponent<SeedPlanter>().planting && 
 		    !burried && (grounded) && Input.GetKey (KeyCode.DownArrow)) {
@@ -149,9 +146,6 @@ public class CharacterController : MonoBehaviour {
 		}*/
 		if (rigidbody2D.velocity.y <= 0) {
 			headCheck.GetComponent<CircleCollider2D>().isTrigger = true;
-			anim.SetBool("isFalling",true);
-			anim.SetBool("isJumping",false);
-
 		} else {
 			headCheck.GetComponent<CircleCollider2D>().isTrigger = false;
 		}
