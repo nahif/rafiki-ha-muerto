@@ -18,7 +18,7 @@ public class CamaraBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		info = GameObject.Find ("InfoSemilla").transform;
-		fondo = GameObject.Find ("FONDO").transform;
+		//fondo = GameObject.Find ("FONDO").transform;
 }
 	
 	// Update is called once per frame
@@ -50,6 +50,6 @@ public class CamaraBehaviour : MonoBehaviour {
 		Vector3 pos = new Vector3(20, Screen.height - 20, 10);
 		Vector3 fondop = new Vector3(100, 0, 20);
 		info.position = Camera.main.ScreenToWorldPoint(pos);
-		fondo.position = Camera.main.ScreenToWorldPoint (fondop);
+		//fondo.position = Camera.main.ScreenToWorldPoint (fondop);
 	}
 }

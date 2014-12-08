@@ -9,8 +9,6 @@ public class CharacterController : MonoBehaviour {
 	private float lastYSpeed;
 	public bool burried = false;
 	bool facingRight=false;
-	Animator anim;
-	Animator Mainanim;
 	public bool grounded;
 	float groundedRadius = .2f;
 	[SerializeField] LayerMask whatIsGround;
@@ -19,15 +17,20 @@ public class CharacterController : MonoBehaviour {
 	Transform headCheck;
 	//Cambios comportamiento segun piso
 	public GroundCheckController gcc;
+
+	//Animaciones:
+	Animator anim;
+	Animator Mainanim;
 	
 	
 	
 	void Start(){
 		Mainanim = GetComponent<Animator> ();
-		anim = GameObject.Find("cuerpo").GetComponent<Animator> ();
+		anim = GameObject.Find("Mockle").GetComponent<Animator>();
 		gcc = (GroundCheckController) GameObject.Find("GroundCheck").GetComponent("GroundCheckController");
 		Physics2D.IgnoreLayerCollision (LayerMask.NameToLayer("Interact"),LayerMask.NameToLayer("Ignore Raycast"),true);
 		//Esto ignora la colision del personaje (Que esta en IGnore Raycast) y las semillas
+
 	}
 	
 	void  Awake() {
@@ -55,7 +58,16 @@ public class CharacterController : MonoBehaviour {
 				if (burried)
 						return;
 				float move = Input.GetAxis ("Horizontal");
-
+				
+				if (move != 0){ 
+							anim.SetFloat("Speed", Mathf.Abs (maxspeed * move));
+			            	anim.speed = Mathf.Abs(maxspeed*move) / 5;
+				}
+				else{
+							anim.SetFloat("Speed", 0);
+					
+				}
+		
 				string materialName = gcc.materialName;
 				if (materialName == "Vacio") {
 						rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
@@ -66,8 +78,8 @@ public class CharacterController : MonoBehaviour {
 						rigidbody2D.velocity = new Vector2 (maxspeed * move, rigidbody2D.velocity.y);
 				}
 		
-				anim.SetFloat ("Speed", Mathf.Abs (maxspeed * move));
-				anim.speed = Mathf.Abs (maxspeed * move) / 5;
+				//anim.SetFloat ("Speed", Mathf.Abs (maxspeed * move));
+				//anim.speed = Mathf.Abs (maxspeed * move) / 5;
 		
 				if (move > 0 && !facingRight) {
 						Flip ();		
@@ -75,6 +87,7 @@ public class CharacterController : MonoBehaviour {
 						Flip ();
 				}
 				if (grounded) {
+						anim.SetBool("inGround",true);
 						int layermask = ~((1 << LayerMask.NameToLayer ("Interact")) | Physics2D.IgnoreRaycastLayer); //VA A IGNORAR INTERACT O PODEMOS PONER QUE SOLO PESQUE GROUND Y COLISION
 						RaycastHit2D hit = Physics2D.Raycast (groundCheck.position, -transform.up, 1f, layermask);
 						if (hit.collider != null && hit.collider.tag != "Player") {
@@ -97,7 +110,7 @@ public class CharacterController : MonoBehaviour {
 				} else {
 			
 						t += Time.deltaTime;
-						anim.SetFloat ("Speed", 0);
+						//anim.SetFloat ("Speed", 1);
 						transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.AngleAxis (0, Vector3.up), t / 2f);
 				}
 				RaycastHit2D obj_below = Physics2D.Raycast (groundCheck.position, -Vector2.up, 5f, whatIsPlatform);
@@ -120,6 +133,7 @@ public class CharacterController : MonoBehaviour {
 		
 		if (!burried &&(grounded) && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.AddForce (transform.up * 500);
+			anim.SetBool("isJumping",true);
 		}
 		/*if (gcc.materialName != "Plant" && !GetComponent<SeedPlanter>().planting && 
 		    !burried && (grounded) && Input.GetKey (KeyCode.DownArrow)) {
@@ -132,6 +146,9 @@ public class CharacterController : MonoBehaviour {
 		}*/
 		if (rigidbody2D.velocity.y <= 0) {
 			headCheck.GetComponent<CircleCollider2D>().isTrigger = true;
+			anim.SetBool("isFalling",true);
+			anim.SetBool("isJumping",false);
+
 		} else {
 			headCheck.GetComponent<CircleCollider2D>().isTrigger = false;
 		}
