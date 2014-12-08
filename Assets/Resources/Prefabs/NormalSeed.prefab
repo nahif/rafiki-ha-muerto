@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ed5b61bade7004bb78d426bca7a88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 400000, guid: 5519054188439ac49afe88e53c7d36e3, type: 2}
+  plant: {fileID: 400018, guid: 92c070222839bca428dd946e9449c1ff, type: 2}
   debugS: 
   wasPlant: 0
 --- !u!212 &21200000
