@@ -17,6 +17,8 @@ public class SeedPlanter : MonoBehaviour
 	private GameObject myCollectedObject; //Aqui se guarda lo que hayamos recogido.
 	private int[] seeds = new int[] {0, 0}; //0 = normal, 1 = hongo
 	private int seedIndex = 0;
+	public GUIText vazul;
+	public GUIText vamarillo;
 
 	public Camera camera;
 	Animator mainAnim;
@@ -34,6 +36,8 @@ public class SeedPlanter : MonoBehaviour
 		maxAuraScale = new Vector2 (2f * radius / startingRendererSize.x, 2f * radius / startingRendererSize.y);
 		cController = GetComponent<CharacterController> ();
 		mainAnim = GetComponent<Animator> ();
+		vazul = GameObject.Find ("valorAzul").guiText;
+		vamarillo = GameObject.Find ("valorAmarillo").guiText;
 	}
 
 		// Update is called once per frame
@@ -72,6 +76,8 @@ public class SeedPlanter : MonoBehaviour
 
 	void Update ()
 	{
+		vazul.text = seeds [0].ToString();
+		vamarillo.text = seeds [1].ToString();
 		if (!GetComponent<CharacterController> ().burried) {
 			//CODIGO PARA RECOGER UNA SEMILLA, TOMA LA PRIMERA Y BOTA LA QUE TIENE (SI TIENE)
 			//Planteo:: Interfaz COLLECTABLE util? (Por si hay mas que semillas)

@@ -4,6 +4,7 @@ using System.Collections;
 public class CamaraBehaviour : MonoBehaviour {
 
 	public Transform Player;
+	private Transform info;
 	
 	public Vector2 Margin, Smoothing;
 	
@@ -15,7 +16,7 @@ public class CamaraBehaviour : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-
+		info = GameObject.Find ("InfoSemilla").transform;
 }
 	
 	// Update is called once per frame
@@ -37,13 +38,14 @@ public class CamaraBehaviour : MonoBehaviour {
 		*/
 		
 		x = Mathf.Lerp(x, Player.position.x,Smoothing.x * Time.deltaTime);
-		y = Mathf.Lerp (y, Player.position.y, Smoothing.y * Time.deltaTime);
+		y = Mathf.Lerp (y, Player.position.y+2, Smoothing.y * Time.deltaTime);
 		//float x = Player.position.x;
 		//float y = Player.position.y+3;
 		
 		
 		
 		transform.position = new Vector3 (x, y, transform.position.z);
-		
+		Vector3 pos = new Vector3(20, Screen.height - 20, 10);
+		info.position = Camera.main.ScreenToWorldPoint(pos);
 	}
 }
