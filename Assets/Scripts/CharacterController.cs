@@ -89,6 +89,7 @@ public class CharacterController : MonoBehaviour {
 				}
 				if (grounded) {
 						anim.SetBool("inGround",true);
+						anim.SetBool("isJumpin",false);
 						int layermask = ~((1 << LayerMask.NameToLayer ("Interact")) | Physics2D.IgnoreRaycastLayer); //VA A IGNORAR INTERACT O PODEMOS PONER QUE SOLO PESQUE GROUND Y COLISION
 						RaycastHit2D hit = Physics2D.Raycast (groundCheck.position, -transform.up, 1f, layermask);
 						if (hit.collider != null && hit.collider.tag != "Player") {
@@ -135,6 +136,7 @@ public class CharacterController : MonoBehaviour {
 		if (!burried &&(grounded) && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.AddForce (transform.up * 500);
 			anim.SetBool("isJumping",true);
+			anim.SetBool("inGround",false);
 		}
 		/*if (gcc.materialName != "Plant" && !GetComponent<SeedPlanter>().planting && 
 		    !burried && (grounded) && Input.GetKey (KeyCode.DownArrow)) {

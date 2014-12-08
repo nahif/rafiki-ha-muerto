@@ -1490,10 +1490,10 @@ MonoBehaviour:
   grounded: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 6657
   whatIsPlatform:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   gcc: {fileID: 1219623515}
 --- !u!58 &476630406
 CircleCollider2D:
@@ -4723,6 +4723,14 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1023706368}
+    - target: {fileID: 11400000, guid: 117a6e9bc15fd4146a772c1d79bea3ca, type: 2}
+      propertyPath: whatIsPlatform.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 117a6e9bc15fd4146a772c1d79bea3ca, type: 2}
+      propertyPath: whatIsGround.m_Bits
+      value: 6657
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 117a6e9bc15fd4146a772c1d79bea3ca, type: 2}
   m_RootGameObject: {fileID: 476630403}
