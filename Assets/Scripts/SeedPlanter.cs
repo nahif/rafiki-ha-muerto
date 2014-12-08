@@ -119,20 +119,21 @@ public class SeedPlanter : MonoBehaviour
 						if (Input.GetKey (KeyCode.DownArrow) && mb is IPlant) {
 							IPlant plant = mb as IPlant;
 							plant.Sel ();
-							GameObject newSeed = Instantiate (Resources.Load ("Prefabs/Semilla")) as GameObject;
-							Transform newSeedTransform = newSeed.transform;
+							GameObject newSeed= null;
+							Transform newSeedTransform = null;
 							Seed seed = null;
+							Debug.Log(plant.type);
 							if (plant.type == IPlant.Type.normal) {
-								newSeed.AddComponent<NormalSeed>();
+								newSeed= Instantiate (Resources.Load ("Prefabs/NormalSeed")) as GameObject;
 								seed = newSeed.GetComponent<NormalSeed> ();
 							} else if (plant.type == IPlant.Type.champinon){
-								newSeed.AddComponent<ChampiSeed>();
+								newSeed= Instantiate (Resources.Load ("Prefabs/ChampiSeed")) as GameObject;
 								seed = newSeed.GetComponent<ChampiSeed> ();
 							}
+							newSeedTransform = newSeed.transform;
 							seed.wasPlant = true;
-							seed.plant = plant.GetComponent<Transform> ();
 							newSeedTransform.transform.position = plant.transform.position;
-							plant.gameObject.SetActive (false);
+							Destroy(plant.gameObject);
 							Debug.Log ("Vuelve planta a semilla");
 							//CREAR UNA SEED Y agregarle la planta.
 						}
