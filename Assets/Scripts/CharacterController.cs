@@ -26,7 +26,7 @@ public class CharacterController : MonoBehaviour {
 	
 	void Start(){
 		Mainanim = GetComponent<Animator> ();
-		anim = GameObject.Find("Mockle").GetComponent<Animator>();
+		anim = GameObject.Find("MockleFinal").GetComponent<Animator>();
 		gcc = (GroundCheckController) GameObject.Find("GroundCheck").GetComponent("GroundCheckController");
 		Physics2D.IgnoreLayerCollision (LayerMask.NameToLayer("Interact"),LayerMask.NameToLayer("Ignore Raycast"),true);
 		//Esto ignora la colision del personaje (Que esta en IGnore Raycast) y las semillas
