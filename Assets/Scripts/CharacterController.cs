@@ -36,6 +36,7 @@ public class CharacterController : MonoBehaviour {
 	void  Awake() {
 		groundCheck = transform.Find ("GroundCheck");
 		headCheck = transform.Find ("HeadCheck");
+
 	}
 	
 	float t = 0f;
