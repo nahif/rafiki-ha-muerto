@@ -650,7 +650,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7234764, y: 1.49761367, z: 0}
+  m_LocalPosition: {x: 14.0770988, y: .318322122, z: 30}
   m_LocalScale: {x: .119999997, y: .119999997, z: 1}
   m_Children:
   - {fileID: 400072}
@@ -1123,8 +1123,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .800000012
-  m_Center: {x: 0, y: -0}
+  m_Radius: 3.1099999
+  m_Center: {x: .239999995, y: 2.28999996}
 --- !u!58 &5800002
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -1145,7 +1145,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .219999999, y: .889999986}
   m_Center: {x: 0, y: 0}
 --- !u!61 &6100002
 BoxCollider2D:
@@ -1172,7 +1172,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1566,8 +1565,6 @@ MonoBehaviour:
   planting: 0
   auraGrowTime: 2.3599999
   auraShrinkTime: .300000012
-  vazul: {fileID: 0}
-  vamarillo: {fileID: 0}
   camera: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:

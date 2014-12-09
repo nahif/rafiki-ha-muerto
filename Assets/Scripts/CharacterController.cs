@@ -161,6 +161,7 @@ public class CharacterController : MonoBehaviour {
 	void Die() {
 		Transform respawner = GameObject.FindGameObjectWithTag ("Respawn").transform;
 		transform.position = respawner.position;
+		rigidbody2D.velocity = new Vector2 (0,0);
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll) {
