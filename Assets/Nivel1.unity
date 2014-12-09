@@ -3163,7 +3163,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &483546750
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,7 +4103,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 664955291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.40822792, y: 1.02290964, z: 4.44000006}
+  m_LocalPosition: {x: 4.82203007, y: .964510322, z: 4.44000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6086,6 +6085,7 @@ GameObject:
   - 81: {fileID: 1023706365}
   - 114: {fileID: 1023706370}
   - 82: {fileID: 1023706371}
+  - 114: {fileID: 1023706372}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6230,6 +6230,17 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1023706372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1023706364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8b5e577290f814fb30109665cc379c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025286823
 GameObject:
   m_ObjectHideFlags: 0
@@ -11127,7 +11138,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1622880727
 MonoBehaviour:
   m_ObjectHideFlags: 0
