@@ -6,7 +6,6 @@ public class Champinon : MonoBehaviour{
 	Animator anim;
 	bool wt=false;
 	void Start () {
-		gameObject.AddComponent<IPlant> ();
 		anim = this.GetComponentInParent<Animator> ();
 	}
 	

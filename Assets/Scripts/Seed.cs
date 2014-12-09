@@ -40,7 +40,7 @@ public class Seed : MonoBehaviour {
 	{
 		//if (puedeCrecer & Planted) {
 		if (Planted) {
-			Debug.Log("HOLA");
+
 			if(wasPlant==false){
 				Instantiate (plant, (transform.position+plantVector), Quaternion.identity);
 			}

@@ -197,13 +197,14 @@ public class SeedPlanter : MonoBehaviour
             }
 			GameObject realSeed = Instantiate(seed) as GameObject;
 			Seed seedController = realSeed.GetComponent<MonoBehaviour> () as Seed;
-			realSeed.active = true;
+			realSeed.SetActive(true);
 
 			realSeed.GetComponent<Transform> ().position = transform.position - transform.up;
 			seeds[seedIndex]--;
 			seedController.onPlant (transform.up);
 			seedController.grow();
 			Destroy(realSeed);
+		
 
         
     }
@@ -223,5 +224,10 @@ public class SeedPlanter : MonoBehaviour
         mainAnim.SetBool ("Dig", false);
 		cController.burried = false;
     }
+	void OnLevelWasLoaded(int level) {
+		Debug.Log("Woohoo");
+		
+	}
+
 
 }
