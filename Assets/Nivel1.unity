@@ -6505,7 +6505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mockle: {fileID: 476630403}
-  nextLevel: StartScreen
+  nextLevel: Nivel02
 --- !u!1 &1058184527
 GameObject:
   m_ObjectHideFlags: 0
@@ -13767,6 +13767,10 @@ Prefab:
       propertyPath: mockle
       value: 
       objectReference: {fileID: 476630403}
+    - target: {fileID: 11400000, guid: be1486e488bae7446a002c6d5741659e, type: 2}
+      propertyPath: nextLevel
+      value: Nivel02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be1486e488bae7446a002c6d5741659e, type: 2}
   m_RootGameObject: {fileID: 1055620724}
