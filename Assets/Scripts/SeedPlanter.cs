@@ -17,9 +17,9 @@ public class SeedPlanter : MonoBehaviour
 	private GameObject myCollectedObject; //Aqui se guarda lo que hayamos recogido.
 	private int[] seeds = new int[] {0, 0}; //0 = normal, 1 = hongo
 	private int seedIndex = 0;
-	public GUIText vazul;
-	public GUIText vamarillo;
-
+	private GUIText vazul;
+	private GUIText vamarillo;
+	private Transform selsem;
 	public Camera camera;
 	Animator mainAnim;
 
@@ -38,6 +38,7 @@ public class SeedPlanter : MonoBehaviour
 		mainAnim = GetComponent<Animator> ();
 		vazul = GameObject.Find ("valorAzul").guiText;
 		vamarillo = GameObject.Find ("valorAmarillo").guiText;
+		selsem = GameObject.Find ("SelSem").transform;
 	}
 
 		// Update is called once per frame
@@ -97,6 +98,7 @@ public class SeedPlanter : MonoBehaviour
             }
 			if (Input.GetKeyDown (KeyCode.X)) {
 				seedIndex = (seedIndex + 1)%seeds.Length;
+				selsem.position=new Vector3(selsem.position.x,selsem.position.y+1*Mathf.Pow(-1,seedIndex),selsem.position.z);
 				Debug.Log("SELECCIONADO: " + seedIndex);
 			}
 			if (Input.GetKeyDown (KeyCode.Z) && Input.GetKey (KeyCode.DownArrow) ) {
