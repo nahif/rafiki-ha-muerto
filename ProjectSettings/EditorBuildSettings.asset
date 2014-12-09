@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Nivel02.unity
   - enabled: 1
     path: Assets/Nivel3.unity
+  - enabled: 1
+    path: Assets/continue.unity
