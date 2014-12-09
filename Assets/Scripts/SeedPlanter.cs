@@ -90,20 +90,20 @@ public class SeedPlanter : MonoBehaviour
 				Debug.Log ("Se supone que tengo que soltar una semilla");
 			}*/
 			if (cController.gcc.materialName != "Plant" && !planting && 
-			   	!cController.burried && cController.grounded && Input.GetKey (KeyCode.DownArrow)) {
+			   	!cController.burried && cController.grounded) {
 				if (Input.GetKeyDown(KeyCode.Z)) {
 					StartCoroutine("Plant");
                	}
             }
-			if (Input.GetKeyDown (KeyCode.C)) {
+			if (Input.GetKeyDown (KeyCode.X)) {
 				seedIndex = (seedIndex + 1)%seeds.Length;
 				Debug.Log("SELECCIONADO: " + seedIndex);
 			}
-			if (Input.GetKeyDown (KeyCode.X)) {
+			if (Input.GetKeyDown (KeyCode.Z) && Input.GetKey (KeyCode.DownArrow) ) {
 				t = 0f;				
 				planting = true;
 			}
-			if (Input.GetKeyUp (KeyCode.X)) {
+			if (Input.GetKeyUp (KeyCode.Z) && planting) {
 				t = 0f;
 				planting = false;
 				float currentRadius = planterAura.localScale.x * startingRendererSize.x / 2f;
@@ -116,7 +116,7 @@ public class SeedPlanter : MonoBehaviour
 							seed.shine (); // Esto deberia estar en PLANTING por que la idea es que "Brille" al seleccionarlo.
 							seed.grow ();
 						}*/
-						if (Input.GetKey (KeyCode.DownArrow) && mb is IPlant) {
+						if ( mb is IPlant) {
 							IPlant plant = mb as IPlant;
 							plant.Sel ();
 							GameObject newSeed= null;
